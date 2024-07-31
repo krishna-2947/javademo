@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+      - echo Installing Maven
+      - mvn install
+  build:
+    commands:
+      - echo Building the application
+      - mvn package
+artifacts:
+  files:
+    - target/*.war
+

@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: target/demo-0.0.1-SNAPSHOT.war
+    destination: /opt/tomcat/latest/webapps/
+hooks:
+  AfterInstall:
+    - location: scripts/deploy.sh
+      timeout: 300
+
